@@ -1,0 +1,9 @@
+the idea is to store the patient doctor prescriptions online. Provide this app to doctors which they can use to create, update delete the medical data of patients. 
+We will only create teh API for this. Ideally the data schould be stored in a database but we'll store it in json. 
+
+Endpoints-
+1. /create
+2. /view- all the patients
+3. /view_patient- a particular patient data
+4. /update
+5. /delete

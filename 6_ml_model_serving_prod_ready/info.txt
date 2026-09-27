@@ -1,0 +1,14 @@
+imporoving the previous code (in folder 5_)-
+1. API should exist independently in its own folder (this folder 6_... will dedicatedly be used for API)
+2. city field is case sensitive- use field validatator to give it in title case
+3. Add a home Endpoint that gives info about the API
+4. health check Endpoint- forced by some Aws services- helps AWS to tell your API is live and working fine. this endpoint is hit by aws services and they want to ensure that the status is OK
+5. Add model_version to health endpoint. model version is generally fetched from mlflow but setting is manually for now. add if model is loaded. 
+6. separation of concerns- instead of having all the code in the same file like pydantinc, model load and prediction, API etc., they should be in separate files
+7. add probability as confidence in the final output to the user 
+8. create a response model that will validate the output data using pydantic that is being sent to the user- similar to the validation performed on the data coming from user
+
+response model defines the structure of your data that the API will return. it helps in
+a. generating clean API docs
+b. validating output so API doesn't return malformed output
+c. filtering unnecessary data
